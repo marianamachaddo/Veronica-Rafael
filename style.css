@@ -1,0 +1,164 @@
+/* Configurações Globais e Tema Escuro */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilo do Carrossel */
+.carousel-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Proporção quadrada */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative; 
+}
+
+.carousel-slide {
+    display: flex;
+    height: 100%;
+    width: 900%; /* 100% para cada uma das 9 imagens */
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide img {
+    width: calc(100% / 9);
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo do Conteúdo (Nomes e Texto) */
+.content {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content .name {
+    font-family: 'Playfair Display', serif;
+    color: #e74c3c;
+}
+
+.content .ampersand {
+    font-family: 'Playfair Display', serif;
+    color: #e74c3c;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0.2em;
+}
+
+/* Estilos para o texto em formato de carta */
+.letter {
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.letter .salutation {
+    font-style: italic;
+}
+
+.letter .highlight {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.letter .closing {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.letter .signature {
+    font-style: italic;
+    text-align: right;
+    margin-top: 1em;
+}
+
+/* Estilo da Seção do Contador */
+.timer-section h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.time-unit {
+    background-color: #1f1f1f;
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.time-unit span {
+    display: block;
+}
+
+.time-unit span:first-child {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.time-unit .label {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    color: #aaaaaa;
+    margin-top: 0.5rem;
+}
+
+.since-date {
+    text-align: center;
+    margin-top: 2rem;
+    color: #aaaaaa;
+    font-weight: 300;
+}
+
+/* Estilos para os Indicadores do Carrossel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(231, 76, 60, 0.4); /* Vermelho do tema, com transparência */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator-dot.active {
+    background-color: #e74c3c; /* Vermelho do tema, sólido */
+}
